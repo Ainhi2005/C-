@@ -12,6 +12,7 @@ namespace bth3
 {
     public partial class Form1 : Form
     {
+        BindingSource bs = new BindingSource();
         public Form1()
         {
             InitializeComponent();
@@ -29,19 +30,5 @@ namespace bth3
                 MessageBox.Show("Sai mật khẩu");
         } }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

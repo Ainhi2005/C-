@@ -43,7 +43,6 @@
             this.label1.Size = new System.Drawing.Size(158, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tên Đăng Nhập";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -67,19 +66,18 @@
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(288, 131);
+            this.txtName.Location = new System.Drawing.Point(288, 144);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(310, 38);
+            this.txtName.Size = new System.Drawing.Size(310, 25);
             this.txtName.TabIndex = 3;
-            this.txtName.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // txtPw
             // 
-            this.txtPw.Location = new System.Drawing.Point(288, 198);
+            this.txtPw.Location = new System.Drawing.Point(288, 212);
             this.txtPw.Multiline = true;
             this.txtPw.Name = "txtPw";
-            this.txtPw.Size = new System.Drawing.Size(310, 38);
+            this.txtPw.Size = new System.Drawing.Size(310, 24);
             this.txtPw.TabIndex = 4;
             // 
             // Form1
