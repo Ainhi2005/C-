@@ -10,17 +10,17 @@ using System.Windows.Forms;
 
 namespace bth3
 {
-    public partial class Form1 : Form
+    public partial class formLogin : Form
     {
         BindingSource bs = new BindingSource();
-        public Form1()
+        public formLogin()
         {
             InitializeComponent();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (txtPw.Text == "123456" && txtName.Text=="NhiNTA")
+            if (txtPw.Text == "0020868" && txtName.Text=="NhiNTA")
             {
                 formSV f = new formSV();
                 f.Show();

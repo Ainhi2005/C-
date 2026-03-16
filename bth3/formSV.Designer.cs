@@ -82,6 +82,7 @@ namespace bth3
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnqllh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
             this.panel1.SuspendLayout();
@@ -260,7 +261,7 @@ namespace bth3
             // btnThem
             // 
             this.btnThem.BackColor = System.Drawing.SystemColors.Highlight;
-            this.btnThem.Location = new System.Drawing.Point(65, 462);
+            this.btnThem.Location = new System.Drawing.Point(61, 434);
             this.btnThem.Name = "btnThem";
             this.btnThem.Size = new System.Drawing.Size(109, 39);
             this.btnThem.TabIndex = 13;
@@ -271,7 +272,7 @@ namespace bth3
             // btnLamMoi
             // 
             this.btnLamMoi.BackColor = System.Drawing.Color.Red;
-            this.btnLamMoi.Location = new System.Drawing.Point(220, 533);
+            this.btnLamMoi.Location = new System.Drawing.Point(216, 505);
             this.btnLamMoi.Name = "btnLamMoi";
             this.btnLamMoi.Size = new System.Drawing.Size(109, 39);
             this.btnLamMoi.TabIndex = 15;
@@ -282,7 +283,7 @@ namespace bth3
             // btnXoa
             // 
             this.btnXoa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.btnXoa.Location = new System.Drawing.Point(65, 533);
+            this.btnXoa.Location = new System.Drawing.Point(61, 505);
             this.btnXoa.Name = "btnXoa";
             this.btnXoa.Size = new System.Drawing.Size(109, 39);
             this.btnXoa.TabIndex = 16;
@@ -293,7 +294,7 @@ namespace bth3
             // btnSua
             // 
             this.btnSua.BackColor = System.Drawing.SystemColors.ButtonShadow;
-            this.btnSua.Location = new System.Drawing.Point(220, 462);
+            this.btnSua.Location = new System.Drawing.Point(216, 434);
             this.btnSua.Name = "btnSua";
             this.btnSua.Size = new System.Drawing.Size(109, 39);
             this.btnSua.TabIndex = 17;
@@ -303,6 +304,7 @@ namespace bth3
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnqllh);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnXoa);
             this.panel1.Controls.Add(this.btnLamMoi);
@@ -322,6 +324,19 @@ namespace bth3
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 652);
             this.panel1.TabIndex = 1;
+            // 
+            // btnqllh
+            // 
+            this.btnqllh.BackColor = System.Drawing.Color.Yellow;
+            this.btnqllh.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnqllh.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnqllh.Location = new System.Drawing.Point(91, 569);
+            this.btnqllh.Name = "btnqllh";
+            this.btnqllh.Size = new System.Drawing.Size(202, 35);
+            this.btnqllh.TabIndex = 18;
+            this.btnqllh.Text = "QUẢN LÝ LỚP HỌC";
+            this.btnqllh.UseVisualStyleBackColor = false;
+            this.btnqllh.Click += new System.EventHandler(this.btnqllh_Click);
             // 
             // formSV
             // 
@@ -364,5 +379,6 @@ namespace bth3
         private System.Windows.Forms.Button btnXoa;
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Panel panel1;
+        private Button btnqllh;
     }
 }

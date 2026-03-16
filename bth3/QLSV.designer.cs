@@ -35,12 +35,6 @@ namespace bth3
     partial void Deletesinhvien(sinhvien instance);
     #endregion
 		
-		public QLSVDataContext() : 
-				base(global::bth3.Properties.Settings.Default.QLSVConnectionString1, mappingSource)
-		{
-			OnCreated();
-		}
-		
 		public QLSVDataContext(string connection) : 
 				base(connection, mappingSource)
 		{

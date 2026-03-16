@@ -1,6 +1,6 @@
 ﻿namespace bth3
 {
-    partial class Form1
+    partial class formLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -48,7 +48,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
-            this.label2.Location = new System.Drawing.Point(135, 212);
+            this.label2.Location = new System.Drawing.Point(139, 231);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 24);
             this.label2.TabIndex = 1;
@@ -56,31 +56,36 @@
             // 
             // btn
             // 
-            this.btn.Location = new System.Drawing.Point(349, 292);
+            this.btn.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.btn.Location = new System.Drawing.Point(301, 321);
             this.btn.Name = "btn";
             this.btn.Size = new System.Drawing.Size(129, 35);
             this.btn.TabIndex = 2;
             this.btn.Text = "Đăng Nhập";
-            this.btn.UseVisualStyleBackColor = true;
+            this.btn.UseVisualStyleBackColor = false;
             this.btn.Click += new System.EventHandler(this.button1_Click);
             // 
             // txtName
             // 
-            this.txtName.Location = new System.Drawing.Point(288, 144);
+            this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.Location = new System.Drawing.Point(288, 129);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(310, 25);
+            this.txtName.Size = new System.Drawing.Size(310, 41);
             this.txtName.TabIndex = 3;
             // 
             // txtPw
             // 
-            this.txtPw.Location = new System.Drawing.Point(288, 212);
+            this.txtPw.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPw.Location = new System.Drawing.Point(288, 211);
             this.txtPw.Multiline = true;
             this.txtPw.Name = "txtPw";
-            this.txtPw.Size = new System.Drawing.Size(310, 24);
+            this.txtPw.Size = new System.Drawing.Size(310, 44);
             this.txtPw.TabIndex = 4;
             // 
-            // Form1
+            // formLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -90,7 +95,7 @@
             this.Controls.Add(this.btn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.ResumeLayout(false);

@@ -47,11 +47,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="QLLH.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QLLH.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="formLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="formLogin.Designer.cs">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="formQLLH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formQLLH.Designer.cs">
+      <DependentUpon>formQLLH.cs</DependentUpon>
     </Compile>
     <Compile Include="formSV.cs">
       <SubType>Form</SubType>
@@ -66,8 +77,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSV.dbml</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="formLogin.resx">
+      <DependentUpon>formLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formQLLH.resx">
+      <DependentUpon>formQLLH.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="formSV.resx">
       <DependentUpon>formSV.cs</DependentUpon>
@@ -81,6 +95,14 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <None Include="QLLH.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>QLLH.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QLLH.dbml.layout">
+      <DependentUpon>QLLH.dbml</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

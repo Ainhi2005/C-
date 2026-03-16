@@ -8,15 +8,45 @@ namespace bth3
     public partial class formSV : Form
     {
         SqlConnection conn = new SqlConnection(@"Data Source=DESKTOP-83E5VHI\SQLEXPRESS01;Initial Catalog=QLSV;Integrated Security=True");
-
+        string maLopDuocChon = "";
+        public formSV(string malop)
+        {
+            InitializeComponent();
+            maLopDuocChon = malop;
+        }
         public formSV()
         {
             InitializeComponent();
         }
+        void LoadSinhVienTheoLop(string malop)
+        {
+            try
+            {
+                conn.Open();
 
+                string sql = "SELECT * FROM sinhvien WHERE malop=@malop";
+
+                SqlDataAdapter da = new SqlDataAdapter(sql, conn);
+                da.SelectCommand.Parameters.AddWithValue("@malop", malop);
+
+                DataTable dt = new DataTable();
+                da.Fill(dt);
+
+                dgvSinhVien.DataSource = dt;
+
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
         private void formSV_Load(object sender, EventArgs e)
         {
-            LoadSinhVien();
+            if (maLopDuocChon == "")
+                LoadSinhVien();
+            else
+                LoadSinhVienTheoLop(maLopDuocChon);
         }
 
         void LoadSinhVien()
@@ -192,6 +222,13 @@ namespace bth3
         private void txtTim_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void btnqllh_Click(object sender, EventArgs e)
+        {
+            formQLLH f = new formQLLH();
+            f.Show();
+            this.Hide();
         }
     }
 }

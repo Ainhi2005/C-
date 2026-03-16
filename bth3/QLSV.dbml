@@ -1,5 +1,4 @@
 ﻿<?xml version="1.0" encoding="utf-8"?><Database Name="QLSV" Class="QLSVDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
-  <Connection Mode="AppSettings" ConnectionString="Data Source=DESKTOP-83E5VHI\SQLEXPRESS01;Initial Catalog=QLSV;User ID=sa;Encrypt=True;Trust Server Certificate=True" SettingsObjectName="bth3.Properties.Settings" SettingsPropertyName="QLSVConnectionString1" Provider="System.Data.SqlClient" />
   <Table Name="dbo.sinhvien" Member="sinhviens">
     <Type Name="sinhvien">
       <Column Name="mssv" Type="System.String" DbType="VarChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
