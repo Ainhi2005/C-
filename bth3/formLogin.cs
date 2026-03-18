@@ -30,5 +30,9 @@ namespace bth3
                 MessageBox.Show("Sai mật khẩu");
         } }
 
+        private void formLogin_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

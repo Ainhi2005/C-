@@ -78,7 +78,6 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(310, 41);
             this.txtName.TabIndex = 3;
-            this.txtName.Text = "nhi";
             // 
             // txtPw
             // 
@@ -121,6 +120,7 @@
             this.Name = "formLogin";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.formLogin_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
