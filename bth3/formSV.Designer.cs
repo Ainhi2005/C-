@@ -70,11 +70,8 @@ namespace bth3
             this.label2 = new System.Windows.Forms.Label();
             this.txtMSSV = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.txtNgaySinh = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txtMaLop = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.txtGioiTinh = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.txtHoTen = new System.Windows.Forms.TextBox();
             this.btnThem = new System.Windows.Forms.Button();
@@ -82,6 +79,9 @@ namespace bth3
             this.btnXoa = new System.Windows.Forms.Button();
             this.btnSua = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.cboMaLop = new System.Windows.Forms.ComboBox();
+            this.dtpNgaySinh = new System.Windows.Forms.DateTimePicker();
+            this.cboGioiTinh = new System.Windows.Forms.ComboBox();
             this.btnqllh = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvSinhVien)).BeginInit();
@@ -99,7 +99,6 @@ namespace bth3
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(745, 652);
             this.panel2.TabIndex = 2;
-            this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
             // label8
             // 
@@ -115,6 +114,7 @@ namespace bth3
             // 
             // dgvSinhVien
             // 
+            this.dgvSinhVien.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             this.dgvSinhVien.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvSinhVien.Location = new System.Drawing.Point(38, 207);
             this.dgvSinhVien.Name = "dgvSinhVien";
@@ -141,7 +141,6 @@ namespace bth3
             this.txtTim.Name = "txtTim";
             this.txtTim.Size = new System.Drawing.Size(311, 33);
             this.txtTim.TabIndex = 1;
-            this.txtTim.TextChanged += new System.EventHandler(this.txtTim_TextChanged);
             // 
             // btnTim
             // 
@@ -193,14 +192,6 @@ namespace bth3
             this.label3.TabIndex = 3;
             this.label3.Text = "ngaysinh";
             // 
-            // txtNgaySinh
-            // 
-            this.txtNgaySinh.Location = new System.Drawing.Point(108, 296);
-            this.txtNgaySinh.Multiline = true;
-            this.txtNgaySinh.Name = "txtNgaySinh";
-            this.txtNgaySinh.Size = new System.Drawing.Size(236, 29);
-            this.txtNgaySinh.TabIndex = 4;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -211,14 +202,6 @@ namespace bth3
             this.label4.TabIndex = 5;
             this.label4.Text = "mã lớp";
             // 
-            // txtMaLop
-            // 
-            this.txtMaLop.Location = new System.Drawing.Point(108, 364);
-            this.txtMaLop.Multiline = true;
-            this.txtMaLop.Name = "txtMaLop";
-            this.txtMaLop.Size = new System.Drawing.Size(236, 31);
-            this.txtMaLop.TabIndex = 6;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -228,15 +211,6 @@ namespace bth3
             this.label6.Size = new System.Drawing.Size(54, 18);
             this.label6.TabIndex = 9;
             this.label6.Text = "gioitinh";
-            // 
-            // txtGioiTinh
-            // 
-            this.txtGioiTinh.Location = new System.Drawing.Point(108, 228);
-            this.txtGioiTinh.Multiline = true;
-            this.txtGioiTinh.Name = "txtGioiTinh";
-            this.txtGioiTinh.Size = new System.Drawing.Size(236, 29);
-            this.txtGioiTinh.TabIndex = 10;
-            this.txtGioiTinh.TextChanged += new System.EventHandler(this.textBox5_TextChanged);
             // 
             // label7
             // 
@@ -254,7 +228,7 @@ namespace bth3
             this.txtHoTen.Location = new System.Drawing.Point(108, 156);
             this.txtHoTen.Multiline = true;
             this.txtHoTen.Name = "txtHoTen";
-            this.txtHoTen.Size = new System.Drawing.Size(236, 34);
+            this.txtHoTen.Size = new System.Drawing.Size(236, 33);
             this.txtHoTen.TabIndex = 12;
             this.txtHoTen.TextChanged += new System.EventHandler(this.textBox6_TextChanged);
             // 
@@ -304,6 +278,9 @@ namespace bth3
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.cboMaLop);
+            this.panel1.Controls.Add(this.dtpNgaySinh);
+            this.panel1.Controls.Add(this.cboGioiTinh);
             this.panel1.Controls.Add(this.btnqllh);
             this.panel1.Controls.Add(this.btnSua);
             this.panel1.Controls.Add(this.btnXoa);
@@ -311,11 +288,8 @@ namespace bth3
             this.panel1.Controls.Add(this.btnThem);
             this.panel1.Controls.Add(this.txtHoTen);
             this.panel1.Controls.Add(this.label7);
-            this.panel1.Controls.Add(this.txtGioiTinh);
             this.panel1.Controls.Add(this.label6);
-            this.panel1.Controls.Add(this.txtMaLop);
             this.panel1.Controls.Add(this.label4);
-            this.panel1.Controls.Add(this.txtNgaySinh);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.txtMSSV);
             this.panel1.Controls.Add(this.label2);
@@ -324,6 +298,35 @@ namespace bth3
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(388, 652);
             this.panel1.TabIndex = 1;
+            // 
+            // cboMaLop
+            // 
+            this.cboMaLop.FormattingEnabled = true;
+            this.cboMaLop.ItemHeight = 16;
+            this.cboMaLop.Location = new System.Drawing.Point(108, 363);
+            this.cboMaLop.Name = "cboMaLop";
+            this.cboMaLop.Size = new System.Drawing.Size(236, 24);
+            this.cboMaLop.TabIndex = 21;
+            // 
+            // dtpNgaySinh
+            // 
+            this.dtpNgaySinh.Location = new System.Drawing.Point(108, 293);
+            this.dtpNgaySinh.Name = "dtpNgaySinh";
+            this.dtpNgaySinh.Size = new System.Drawing.Size(236, 22);
+            this.dtpNgaySinh.TabIndex = 20;
+            // 
+            // cboGioiTinh
+            // 
+            this.cboGioiTinh.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboGioiTinh.FormattingEnabled = true;
+            this.cboGioiTinh.ItemHeight = 18;
+            this.cboGioiTinh.Items.AddRange(new object[] {
+            "Nam ",
+            "Nữ"});
+            this.cboGioiTinh.Location = new System.Drawing.Point(108, 216);
+            this.cboGioiTinh.Name = "cboGioiTinh";
+            this.cboGioiTinh.Size = new System.Drawing.Size(236, 26);
+            this.cboGioiTinh.TabIndex = 19;
             // 
             // btnqllh
             // 
@@ -342,7 +345,7 @@ namespace bth3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1381, 713);
+            this.ClientSize = new System.Drawing.Size(1206, 713);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "formSV";
@@ -367,11 +370,8 @@ namespace bth3
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtMSSV;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox txtNgaySinh;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtMaLop;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox txtGioiTinh;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txtHoTen;
         private System.Windows.Forms.Button btnThem;
@@ -380,5 +380,8 @@ namespace bth3
         private System.Windows.Forms.Button btnSua;
         private System.Windows.Forms.Panel panel1;
         private Button btnqllh;
+        private DateTimePicker dtpNgaySinh;
+        private ComboBox cboGioiTinh;
+        private ComboBox cboMaLop;
     }
 }
