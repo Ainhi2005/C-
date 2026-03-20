@@ -44,5 +44,16 @@ namespace bth3.Properties {
                 return ((string)(this["QLSVConnectionString1"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=DESKTOP-83E5VHI\\SQLEXPRESS01;Initial Catalog=QLSV;Persist Security In" +
+            "fo=True;User ID=sa;Password=ainhi;Encrypt=True;TrustServerCertificate=True")]
+        public string QLSVConnectionString2 {
+            get {
+                return ((string)(this["QLSVConnectionString2"]));
+            }
+        }
     }
 }

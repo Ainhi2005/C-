@@ -84,9 +84,7 @@ namespace bth3
 		
 		private string _MonHoc;
 		
-		private string _GiangVien;
-		
-		private System.Nullable<int> _SiSo;
+		private string _GhiChu;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -96,10 +94,8 @@ namespace bth3
     partial void OnMaLopChanged();
     partial void OnMonHocChanging(string value);
     partial void OnMonHocChanged();
-    partial void OnGiangVienChanging(string value);
-    partial void OnGiangVienChanged();
-    partial void OnSiSoChanging(System.Nullable<int> value);
-    partial void OnSiSoChanged();
+    partial void OnGhiChuChanging(string value);
+    partial void OnGhiChuChanged();
     #endregion
 		
 		public LopHoc()
@@ -107,7 +103,7 @@ namespace bth3
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLop", DbType="NVarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLop", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string MaLop
 		{
 			get
@@ -127,7 +123,7 @@ namespace bth3
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MonHoc", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MonHoc", DbType="NVarChar(100)")]
 		public string MonHoc
 		{
 			get
@@ -147,42 +143,22 @@ namespace bth3
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GiangVien", DbType="NVarChar(50)")]
-		public string GiangVien
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_GhiChu", DbType="NVarChar(255)")]
+		public string GhiChu
 		{
 			get
 			{
-				return this._GiangVien;
+				return this._GhiChu;
 			}
 			set
 			{
-				if ((this._GiangVien != value))
+				if ((this._GhiChu != value))
 				{
-					this.OnGiangVienChanging(value);
+					this.OnGhiChuChanging(value);
 					this.SendPropertyChanging();
-					this._GiangVien = value;
-					this.SendPropertyChanged("GiangVien");
-					this.OnGiangVienChanged();
-				}
-			}
-		}
-		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_SiSo", DbType="Int")]
-		public System.Nullable<int> SiSo
-		{
-			get
-			{
-				return this._SiSo;
-			}
-			set
-			{
-				if ((this._SiSo != value))
-				{
-					this.OnSiSoChanging(value);
-					this.SendPropertyChanging();
-					this._SiSo = value;
-					this.SendPropertyChanged("SiSo");
-					this.OnSiSoChanged();
+					this._GhiChu = value;
+					this.SendPropertyChanged("GhiChu");
+					this.OnGhiChuChanged();
 				}
 			}
 		}

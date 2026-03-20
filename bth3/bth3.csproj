@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="formDSSVTheoLop.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formDSSVTheoLop.Designer.cs">
+      <DependentUpon>formDSSVTheoLop.cs</DependentUpon>
+    </Compile>
     <Compile Include="QLLH.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -80,6 +86,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QLSV.dbml</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="formDSSVTheoLop.resx">
+      <DependentUpon>formDSSVTheoLop.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="formLogin.resx">
       <DependentUpon>formLogin.cs</DependentUpon>
     </EmbeddedResource>

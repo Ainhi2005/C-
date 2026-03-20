@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="QLSV">
   <DataContextMoniker Name="/QLSVDataContext" />
   <nestedChildShapes>
-    <classShape Id="40cc2ad1-67aa-4365-85dc-abb2c24dfa68" absoluteBounds="1.375, 0.75, 2, 1.7708968098958331">
+    <classShape Id="fa429df5-e71a-4659-a5c2-fe40702e179b" absoluteBounds="2.25, 3.25, 2, 1.7708968098958331">
       <DataClassMoniker Name="/QLSVDataContext/sinhvien" />
       <nestedChildShapes>
-        <elementListCompartment Id="931221b4-1e5b-43c6-bfb1-a267e73ba234" absoluteBounds="1.3900000000000001, 1.21, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="485871f5-3516-48c0-925d-773581ec967a" absoluteBounds="2.265, 3.71, 1.9700000000000002, 1.2108968098958333" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
   </nestedChildShapes>

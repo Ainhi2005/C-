@@ -35,6 +35,12 @@ namespace bth3
     partial void Deletesinhvien(sinhvien instance);
     #endregion
 		
+		public QLSVDataContext() : 
+				base(global::bth3.Properties.Settings.Default.QLSVConnectionString2, mappingSource)
+		{
+			OnCreated();
+		}
+		
 		public QLSVDataContext(string connection) : 
 				base(connection, mappingSource)
 		{
@@ -82,7 +88,7 @@ namespace bth3
 		
 		private System.Nullable<System.DateTime> _ngaysinh;
 		
-		private string _malop;
+		private string _MaLop;
 		
     #region Extensibility Method Definitions
     partial void OnLoaded();
@@ -96,8 +102,8 @@ namespace bth3
     partial void OngioitinhChanged();
     partial void OnngaysinhChanging(System.Nullable<System.DateTime> value);
     partial void OnngaysinhChanged();
-    partial void OnmalopChanging(string value);
-    partial void OnmalopChanged();
+    partial void OnMaLopChanging(string value);
+    partial void OnMaLopChanged();
     #endregion
 		
 		public sinhvien()
@@ -105,7 +111,7 @@ namespace bth3
 			OnCreated();
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mssv", DbType="VarChar(10) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_mssv", DbType="VarChar(20) NOT NULL", CanBeNull=false, IsPrimaryKey=true)]
 		public string mssv
 		{
 			get
@@ -125,7 +131,7 @@ namespace bth3
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_hoten", DbType="NVarChar(50)")]
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_hoten", DbType="NVarChar(100)")]
 		public string hoten
 		{
 			get
@@ -185,22 +191,22 @@ namespace bth3
 			}
 		}
 		
-		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_malop", DbType="VarChar(10)")]
-		public string malop
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_MaLop", DbType="VarChar(20)")]
+		public string MaLop
 		{
 			get
 			{
-				return this._malop;
+				return this._MaLop;
 			}
 			set
 			{
-				if ((this._malop != value))
+				if ((this._MaLop != value))
 				{
-					this.OnmalopChanging(value);
+					this.OnMaLopChanging(value);
 					this.SendPropertyChanging();
-					this._malop = value;
-					this.SendPropertyChanged("malop");
-					this.OnmalopChanged();
+					this._MaLop = value;
+					this.SendPropertyChanged("MaLop");
+					this.OnMaLopChanged();
 				}
 			}
 		}
